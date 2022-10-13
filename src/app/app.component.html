@@ -1,8 +1,15 @@
-<mat-drawer-container class="example-container">
-  <mat-drawer mode="side" opened>Drawer content
-    <app-sidebar></app-sidebar>
-  </mat-drawer>
-  <mat-drawer-content>Main content
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side" [(opened)] ="opened"> 
+    <h1>Post-Man-Lite</h1>
+    <app-sidebar></app-sidebar>  
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="hamburger-lines" (click) = "sidenav.toggle()" >
+      <span class="line line1"></span>
+      <span class="line line2"></span>
+      <span class="line line3"></span>
+    </div> 
+    <br><br> <br><br>
     <app-main-page></app-main-page>
-  </mat-drawer-content>
-</mat-drawer-container>
+  </mat-sidenav-content>
+</mat-sidenav-container>

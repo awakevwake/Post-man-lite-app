@@ -1,56 +1,46 @@
+<div class = "side">
 <mat-card class="first-card">
     <mat-card-title>Rest Controller</mat-card-title>
     <mat-card-content>
         <mat-form-field appearance="fill">
             <mat-label>Favorite food</mat-label>
             <mat-select>
-              <mat-option> Apple </mat-option>
-              <mat-option> Banana </mat-option>
-              <mat-option> Orange </mat-option>
+                <mat-option *ngFor="let food of foods" [value]="food.value">
+                    {{food.viewValue}} </mat-option>
             </mat-select>
           </mat-form-field>
-          <button mat-raised-button>Submit</button>
+          <br>
+          <button mat-raised-button color="primary">Submit</button>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
   </mat-card>
-
+<br>
   <mat-card class="second-card">
     <mat-card-title>Rest Controller</mat-card-title>
     <mat-card-content>
         <mat-form-field appearance="fill">
             <mat-label>Favorite Place</mat-label>
             <mat-select>
-              <mat-option> New York </mat-option>
-              <mat-option> London </mat-option>
-              <mat-option> Ohio </mat-option>
+                <mat-option *ngFor="let place of places" [value]="place.value">
+                    {{place.viewValue}} </mat-option>
             </mat-select>
           </mat-form-field>
-          <button mat-raised-button>Submit</button>
+          <br>
+          <button mat-raised-button color="primary">Submit</button>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
   </mat-card>
-
+<br>
   <mat-card class="third-card">
     <mat-card-title>Rest Controller</mat-card-title>
     <mat-card-content>
         <mat-form-field appearance="fill">
             <mat-label>Favorite Sports</mat-label>
             <mat-select>
-              <mat-option> Soccer </mat-option>
-              <mat-option> Rugby </mat-option>
-              <mat-option> Baseball </mat-option>
+                <mat-option *ngFor="let sport of sports" [value]="sport.value">
+                    {{sport.viewValue}} </mat-option> 
             </mat-select>
           </mat-form-field>
-          <button mat-raised-button>Submit</button>
+          <br>
+          <button mat-raised-button color="primary">Submit</button>
     </mat-card-content>
-    <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
-    </mat-card-actions>
   </mat-card>
+  </div>

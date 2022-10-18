@@ -1,8 +1,8 @@
-.example-container {
+.container {
     position: absolute;
     top: 0;
     bottom: 0;
-    left: 0;
+    left: 20px;
     right: 0;
   }
 
@@ -28,3 +28,45 @@
     border-radius: 10px;
     background: #0e2431;
   }
+
+.container{
+  display:flex;
+  flex-direction:row;
+  justify-content: space-around;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding:0;
+  max-height: 100vh;
+}
+
+.two-split-cards{
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  padding:0;
+  max-height: 40vh;
+}
+
+.side{
+  flex:1;
+  order:1;
+}
+
+.main{
+  flex:4;
+  order:2;
+}
+
+.main-card-box{
+  flex-basis: 37%;
+  max-height: 50vh;
+  min-height: 37vh;
+}
+
+mat-card{
+  border:1px solid black;
+}

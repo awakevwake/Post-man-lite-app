@@ -1,4 +1,4 @@
-<mat-sidenav-container class="example-container">
+<!-- <mat-sidenav-container class="example-container">
   <mat-sidenav #sidenav mode="side" [(opened)] ="opened"> 
     <h1>Post-Man-Lite</h1>
     <app-sidebar></app-sidebar>  
@@ -12,4 +12,108 @@
     <br><br> <br><br>
     <app-main-page></app-main-page>
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->
+<div class="container">
+  <div class="side">
+    <h1>Side Heading</h1>
+    <mat-card class="first-card">
+      <mat-card-title>Rest Controller</mat-card-title>
+      <mat-card-content>
+          <mat-form-field appearance="fill">
+              <mat-label>Favorite food</mat-label>
+              <mat-select>
+                  <mat-option *ngFor="let food of foods" [value]="food.value">
+                      {{food.viewValue}} </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary">Submit</button>
+      </mat-card-content>
+    </mat-card>
+  <br>
+    <mat-card class="second-card">
+      <mat-card-title>Rest Controller</mat-card-title>
+      <mat-card-content>
+          <mat-form-field appearance="fill">
+              <mat-label>Favorite Place</mat-label>
+              <mat-select>
+                  <mat-option *ngFor="let place of places" [value]="place.value">
+                      {{place.viewValue}} </mat-option>
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary">Submit</button>
+      </mat-card-content>
+    </mat-card>
+  <br>
+    <mat-card class="third-card">
+      <mat-card-title>Rest Controller</mat-card-title>
+      <mat-card-content>
+          <mat-form-field appearance="fill">
+              <mat-label>Favorite Sports</mat-label>
+              <mat-select>
+                  <mat-option *ngFor="let sport of sports" [value]="sport.value">
+                      {{sport.viewValue}} </mat-option> 
+              </mat-select>
+            </mat-form-field>
+            <br>
+            <button mat-raised-button color="primary">Submit</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="main">
+    <h1>Main Heading</h1>
+
+<br>
+<div class="two-split-cards">
+  <mat-card class="first-card main-card-box">
+    <mat-card-subtitle>Body</mat-card-subtitle>
+    <mat-card-title>Body</mat-card-title>
+    <mat-card-content>
+      <p>Body</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="first-card main-card-box">
+    <mat-card-subtitle>Header</mat-card-subtitle>
+    <mat-card-title>Header</mat-card-title>
+    <mat-card-content>
+      <p>Header</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+<div class="two-split-cards">
+  <mat-card class="second-card main-card-box">
+    <mat-card-subtitle>Response</mat-card-subtitle>
+    <mat-card-title>Response</mat-card-title>
+    <mat-card-content>
+      <p>Response</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-card class="second-card main-card-box">
+    <mat-card-subtitle>Subcription</mat-card-subtitle>
+    <mat-card-title>Subcription</mat-card-title>
+    <mat-card-content>
+      <p>Subcription</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>LIKE</button>
+      <button mat-button>SHARE</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+    
+  </div>
+</div>

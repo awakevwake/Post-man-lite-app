@@ -27,14 +27,15 @@
       </mat-card>
 <br>
       <mat-card class="third-card">
-        <mat-card-subtitle>Provision section</mat-card-subtitle>
-        <mat-card-title>Provision section</mat-card-title>
+        <mat-card-subtitle>Login section</mat-card-subtitle>
+        <mat-card-title>Login section</mat-card-title>
         <mat-card-content>
           <p>This card contains a simple card with a section</p>
           <p>{{ longText }}</p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>LIKE</button>
+          <button mat-button (click)="openDialog()">Open Dialog</button>
+          <a [routerLink] = "['/home','playground']" [queryParams]= "{token:'hsiuadhfii9882y3u4u92ri34',search:'vivek'}"> Create </a>
           <button mat-button>SHARE</button>
         </mat-card-actions>
       </mat-card>      
